@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Seat";
+}
+
+<h2>Seat</h2>
+
+
+<div class="container body-content">
+    <div class="jumbotron" style="height:500px">
+        <div class="col-sm-3">
+
+            <table class="table" style="width:400px">
+                <thead>
+                    <tr>
+                        <th colspan="5" align="center" scoper="col"><h1>S c r e e n</h1></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">A열</th>
+                        <td><input type="button" style="height:50px; width:50px @ViewData["clickSeat1"]" value="A1" onclick="location.href='@Url.Action("Seat", "Home",new { param="1" })'" /></td>
+                        <td><input type="button" style="height:50px; width:50px @ViewData["clickSeat2"]" value="A2" onclick="location.href='@Url.Action("Seat", "Home",new { param="2" })'" /></td>
+                        <td><input type="button" style="height:50px; width:50px @ViewData["clickSeat3"]" value="A3" onclick="location.href='@Url.Action("Seat", "Home",new { param="3" })'" /></td>
+                        <td><input type="button" style="height:50px; width:50px @ViewData["clickSeat4"]" value="A4" onclick="location.href='@Url.Action("Seat", "Home",new { param="4" })'" /></td>
+                        <td><input type="button" style="height:50px; width:50px @ViewData["clickSeat5"]" value="A5" onclick="location.href='@Url.Action("Seat", "Home",new { param="5" })'" /></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">B열</th>
+                        <td><input type="button" style="height:50px; width:50px @ViewData["clickSeat6"]" value="B1" onclick="location.href='@Url.Action("Seat", "Home",new { param="6" })'" /></td>
+                        <td><input type="button" style="height:50px; width:50px @ViewData["clickSeat7"]" value="B2" onclick="location.href='@Url.Action("Seat", "Home",new { param="7" })'" /></td>
+                        <td><input type="button" style="height:50px; width:50px @ViewData["clickSeat8"]" value="B3" onclick="location.href='@Url.Action("Seat", "Home",new { param="8" })'" /></td>
+                        <td><input type="button" style="height:50px; width:50px @ViewData["clickSeat9"]" value="B4" onclick="location.href='@Url.Action("Seat", "Home",new { param="9" })'" /></td>
+                        <td><input type="button" style="height:50px; width:50px @ViewData["clickSeat10"]" value="B5" onclick="location.href='@Url.Action("Seat", "Home",new { param="10" })'" /></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">C열</th>
+                        <td><input type="button" style="height:50px; width:50px @ViewData["clickSeat11"]" value="C1" onclick="location.href='@Url.Action("Seat", "Home",new { param="11" })'" /></td>
+                        <td><input type="button" style="height:50px; width:50px @ViewData["clickSeat12"]" value="C2" onclick="location.href='@Url.Action("Seat", "Home",new { param="12" })'" /></td>
+                        <td><input type="button" style="height:50px; width:50px @ViewData["clickSeat13"]" value="C3" onclick="location.href='@Url.Action("Seat", "Home",new { param="13" })'" /></td>
+                        <td><input type="button" style="height:50px; width:50px @ViewData["clickSeat14"]" value="C4" onclick="location.href='@Url.Action("Seat", "Home",new { param="14" })'" /></td>
+                        <td><input type="button" style="height:50px; width:50px @ViewData["clickSeat15"]" value="C5" onclick="location.href='@Url.Action("Seat", "Home",new { param="15" })'" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>Testing : @ViewData["testingSeat"]</h4>
+            <h1>count: @ViewData["testingSeat2"]</h1>
+            <input type="button" style="height:50px; width:200px" value="결제" onclick="location.href='@Url.Action("Buy", "Home")'" />
+        </div>
+    </div>
+</div>

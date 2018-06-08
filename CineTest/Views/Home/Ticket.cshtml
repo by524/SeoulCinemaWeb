@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "Ticket";
+}
+
+
+<div class="container body-content">
+    <div class="jumbotron">
+
+        <h2>Ticket</h2>
+
+        
+        <hr />
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="http://img1.daumcdn.net/thumb/C155x225/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fmovie%2F676b7dbf7a2cf721d01efc61708493080d2a9d8e" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">타이타닉</h2>
+                        <input type="button" value=@ViewData["get1S1"] onclick="location.href='@Url.Action("Seat", "Home",new { param=@ViewData["Ticket_get1S1"] })'" />
+                        <input type="button" value=@ViewData["get1S2"] onclick="location.href='@Url.Action("Seat", "Home",new { param=@ViewData["Ticket_get1S1"] })'" />
+                        <input type="button" value=@ViewData["get1S3"] onclick="location.href='@Url.Action("Seat", "Home",new { param=@ViewData["Ticket_get1S1"] })'" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr /><div class="row">
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="http://img1.daumcdn.net/thumb/C155x225/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fcfile%2F136F1B10AB9F75D3A8" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">펄프픽션</h2>
+                        <input type="button" value=@ViewData["get2S1"] onclick="location.href='@Url.Action("Seat", "Home",new { param=@ViewData["Ticket_get1S1"] })'" />
+                        <input type="button" value=@ViewData["get2S2"] onclick="location.href='@Url.Action("Seat", "Home",new { param="success" })'" />
+                        <input type="button" value=@ViewData["get2S3"] onclick="location.href='@Url.Action("Seat", "Home",new { param="success" })'" />
+                        <h1>@ViewData["getS"]</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="http://img1.daumcdn.net/thumb/C155x225/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fcfile%2F2176D54E53070B462D" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">그랜드 부다 페스트 호텔</h2>
+                        <h1>@ViewData["getS"]</h1>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="http://img1.daumcdn.net/thumb/C155x225/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fmovie%2Ff7127663f3e94138a5f2d1a50c50127fb4b95d45" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">세븐</h2>
+                        <h1>@ViewData["getS"]</h1>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+
+    </div>
+</div>

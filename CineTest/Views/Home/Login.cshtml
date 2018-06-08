@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+@model CineTest.Models.LoginModel
+
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<h3>result : @ViewData["result"]</h3>
+<h1>sql: @ViewData["sql"]</h1>
+<h1>depth: @ViewData["depth"]</h1>
+<p>Use this area to provide additional information.</p>
+<h1> 로그인창</h1>
+
+<div class="container body-content">
+    <div class="jumbotron">
+
+        <form class="form-horizontal" method="post">
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1">아이디</span>
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1" id="idTb">
+            </div>
+            <p></p>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1">비밀번호</span>
+                <input type="password" class="form-control" placeholder="Username" aria-describedby="sizing-addon1" id="passwordTb">
+            </div>
+            <button type="submit" class="btn btn-default navbar-btn">로그인</button>
+            <button type="button" class="btn btn-default navbar-btn">회원가입</button>
+        </form>
+
+        
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h4>StudentModel</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Id, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <!-- 비밀번호시 PasswordFor 사용 -->
+                        @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Password, "*", new { @class = "text-danger" })
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<div class="container body-content">
+    <div class="jumbotron">
+
+
+        <h1>@ViewData["send"]</h1>
+
+        <input type="button" value=@ViewData["date1"] onclick="location.href='@Url.Action("TIcket", "Home",new { param="1" })'" />
+        <input type="button" value=@ViewData["date2"] onclick="location.href='@Url.Action("TIcket", "Home",new { param="2" })'" />
+        <input type="button" value=@ViewData["date3"] onclick="location.href='@Url.Action("TIcket", "Home",new { param="3" })'" />
+        <input type="button" value=@ViewData["date4"] onclick="location.href='@Url.Action("TIcket", "Home",new { param="4" })'" />
+        <input type="button" value=@ViewData["date5"] onclick="location.href='@Url.Action("TIcket", "Home",new { param="5" })'" />
+        <input type="button" value=@ViewData["date6"] onclick="location.href='@Url.Action("TIcket", "Home",new { param="6" })'" />
+        <input type="button" value=@ViewData["date7"] onclick="location.href='@Url.Action("TIcket", "Home",new { param="7" })'" />
+
+        <hr />
+        <input type="button" value=@ViewData["date7"] onclick="location.href='@Url.Action("TIcket", "Home",new { param="7" })'" />
+
+
+
+        <address>
+            <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+            <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+        </address>
+
+
+    </div>
+</div>
